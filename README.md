@@ -1,4 +1,8 @@
 # propuesta-clean-architecture Project
+## By: Juan Camilo Cardona Calderón
+
+![Image](https://apiumhub.com/wp-content/uploads/2018/10/Screenshot-2018-10-30-at-08.45.49.png "Clean Architecture")
+
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
