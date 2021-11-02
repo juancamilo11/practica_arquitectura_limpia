@@ -1,4 +1,4 @@
-package dev.j3c.sofkau.cleanarch.application;
+package dev.j3c.sofkau.cleanarch.application.usecase;
 
 import dev.j3c.sofkau.cleanarch.domain.generic.DomainEvent;
 import dev.j3c.sofkau.cleanarch.domain.generic.EventStoreRepository;
