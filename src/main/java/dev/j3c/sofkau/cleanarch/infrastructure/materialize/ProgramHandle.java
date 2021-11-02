@@ -36,7 +36,7 @@ public class ProgramHandle {
     @ConsumeEvent(value = "sofkau.bill.productadded", blocking = true)
     void consumeProductAdded(ProductAdded event) {
         BasicDBObject document = new BasicDBObject();
-        document.put("courses."+event.getProductId(), String.valueOf(event.getProductName() + event.getProductPrice()));
+        document.put("products."+event.getProductId(), String.valueOf(event.getProductName() + event.getProductPrice()));
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);
