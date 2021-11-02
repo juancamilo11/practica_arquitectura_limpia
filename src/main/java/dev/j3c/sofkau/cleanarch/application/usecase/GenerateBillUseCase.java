@@ -13,6 +13,7 @@ public class GenerateBillUseCase implements Function<GenerateBillCommand, List<D
 
     @Override
     public List<DomainEvent> apply(GenerateBillCommand command) {
+        System.out.println("use case apply");
         Bill bill = new Bill(command.getBillId(),
                 command.getCustomerId(),
                 command.getCustomerName(),

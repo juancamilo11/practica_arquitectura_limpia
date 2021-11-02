@@ -23,6 +23,7 @@ public class ProgramHandle {
 
     @ConsumeEvent(value = "sofkau.bill.billgenerated", blocking = true)
     void consumeBillGenerated(BillGenerated event) {
+        System.out.println("materialize");
         Map<String, Object> document = new HashMap<>();
         document.put("_id", event.getAggregateId());
         document.put("customerId", event.customerId());

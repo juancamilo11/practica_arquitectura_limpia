@@ -16,8 +16,9 @@ public class CreateProgramUseCaseHandle extends UseCaseHandle {
         this.generateBillUseCase = generateBillUseCase;
     }
 
-    @ConsumeEvent(value="sofkau.bill.billgenerated", blocking=true)
+    @ConsumeEvent(value="sofkau.bill.generatebill", blocking=true)
     void consumeBlocking(GenerateBillCommand command) {
+        System.out.println("Generate handle");
         var events = generateBillUseCase.apply(command);
         saveBill(command.getBillId(), events);
     }
