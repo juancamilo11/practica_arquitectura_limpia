@@ -3,6 +3,7 @@ package dev.j3c.sofkau.cleanarch.infrastructure.generic;
 import dev.j3c.sofkau.cleanarch.domain.generic.DomainEvent;
 import dev.j3c.sofkau.cleanarch.domain.generic.EventStoreRepository;
 import dev.j3c.sofkau.cleanarch.domain.generic.StoredEvent;
+import dev.j3c.sofkau.cleanarch.infrastructure.MessageService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
