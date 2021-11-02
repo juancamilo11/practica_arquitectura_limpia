@@ -5,9 +5,11 @@ import dev.j3c.sofkau.cleanarch.domain.generic.EventStoreRepository;
 import dev.j3c.sofkau.cleanarch.domain.bill.Bill;
 import dev.j3c.sofkau.cleanarch.domain.bill.command.AddProductCommand;
 
+import javax.enterprise.context.Dependent;
 import java.util.List;
 import java.util.function.Function;
 
+@Dependent
 public class AddProductUseCase implements Function<AddProductCommand, List<DomainEvent>> {
 
     private final EventStoreRepository repository;
