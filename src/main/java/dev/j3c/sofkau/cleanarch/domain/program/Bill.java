@@ -18,7 +18,7 @@ public class Bill extends AggregateRoot implements EventChange {
     private Map<String, Product> products;
     private Double totalPrice;
 
-    protected Bill(String billId, String customerId, String customerName, String customerPhoneNumber) {
+    public Bill(String billId, String customerId, String customerName, String customerPhoneNumber) {
         super(billId);
         appendChange(new BillGenerated(customerId, customerName, customerPhoneNumber)).apply();
     }
@@ -36,9 +36,10 @@ public class Bill extends AggregateRoot implements EventChange {
             this.totalPrice = 0.0;
         });
 
-        listener((ProductAdded event) -> {
-            products.put(event.getProductId(), new Product(event.getProductId(), event.getProductName(), event.getProductPrice()));
-        });
+        listener((ProductAdded event) -> products.put(event.getProductId(),
+                new Product(event.getProductId(),
+                        event.getProductName(),
+                        event.getProductPrice())));
     }
 
     public static Bill from(String billId, List<DomainEvent> events){
@@ -47,6 +48,8 @@ public class Bill extends AggregateRoot implements EventChange {
         return bill;
     }
 
-
+    public void addProduct(String productId, String name, Double price){
+        appendChange(new ProductAdded(productId, name, price)).apply();
+    }
 
 }
