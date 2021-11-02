@@ -1,4 +1,4 @@
-package dev.j3c.sofkau.cleanarch.domain.program.event;
+package dev.j3c.sofkau.cleanarch.domain.bill.event;
 
 import dev.j3c.sofkau.cleanarch.domain.generic.DomainEvent;
 

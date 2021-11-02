@@ -1,7 +1,7 @@
 package dev.j3c.sofkau.cleanarch.infrastructure;
 
-import dev.j3c.sofkau.cleanarch.domain.program.command.AddProductCommand;
-import dev.j3c.sofkau.cleanarch.domain.program.command.GenerateBillCommand;
+import dev.j3c.sofkau.cleanarch.domain.bill.command.AddProductCommand;
+import dev.j3c.sofkau.cleanarch.domain.bill.command.GenerateBillCommand;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;

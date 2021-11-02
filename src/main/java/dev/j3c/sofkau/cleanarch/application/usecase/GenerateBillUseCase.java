@@ -1,10 +1,8 @@
 package dev.j3c.sofkau.cleanarch.application.usecase;
 
 import dev.j3c.sofkau.cleanarch.domain.generic.DomainEvent;
-import dev.j3c.sofkau.cleanarch.domain.generic.EventStoreRepository;
-import dev.j3c.sofkau.cleanarch.domain.generic.StoredEvent;
-import dev.j3c.sofkau.cleanarch.domain.program.Bill;
-import dev.j3c.sofkau.cleanarch.domain.program.command.GenerateBillCommand;
+import dev.j3c.sofkau.cleanarch.domain.bill.Bill;
+import dev.j3c.sofkau.cleanarch.domain.bill.command.GenerateBillCommand;
 
 import java.util.List;
 import java.util.function.Function;

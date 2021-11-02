@@ -1,4 +1,4 @@
-package dev.j3c.sofkau.cleanarch.domain.program.command;
+package dev.j3c.sofkau.cleanarch.domain.bill.command;
 
 import dev.j3c.sofkau.cleanarch.domain.generic.Command;
 

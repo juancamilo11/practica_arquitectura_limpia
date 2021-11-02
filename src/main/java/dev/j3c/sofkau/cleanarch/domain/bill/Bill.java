@@ -1,10 +1,10 @@
-package dev.j3c.sofkau.cleanarch.domain.program;
+package dev.j3c.sofkau.cleanarch.domain.bill;
 
 import dev.j3c.sofkau.cleanarch.domain.generic.AggregateRoot;
 import dev.j3c.sofkau.cleanarch.domain.generic.DomainEvent;
 import dev.j3c.sofkau.cleanarch.domain.generic.EventChange;
-import dev.j3c.sofkau.cleanarch.domain.program.event.BillGenerated;
-import dev.j3c.sofkau.cleanarch.domain.program.event.ProductAdded;
+import dev.j3c.sofkau.cleanarch.domain.bill.event.BillGenerated;
+import dev.j3c.sofkau.cleanarch.domain.bill.event.ProductAdded;
 
 import java.time.LocalDate;
 import java.util.HashMap;

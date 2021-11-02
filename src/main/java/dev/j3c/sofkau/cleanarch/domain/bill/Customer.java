@@ -1,4 +1,4 @@
-package dev.j3c.sofkau.cleanarch.domain.program;
+package dev.j3c.sofkau.cleanarch.domain.bill;
 
 import java.util.Objects;
 
