@@ -17,7 +17,7 @@ public class AddProductUseCaseHandle extends UseCaseHandle {
         this.addProductUseCase = addProductUseCase;
     }
 
-    @ConsumeEvent(value="sofkau.bill.productadded", blocking=true)
+    @ConsumeEvent(value="sofkau.bill.addproduct", blocking=true)
     void consumeBlocking(AddProductCommand command) {
         var events = addProductUseCase.apply(command);
         saveBill(command.getBillId(), events);

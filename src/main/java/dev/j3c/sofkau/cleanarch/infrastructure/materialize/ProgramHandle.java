@@ -3,6 +3,7 @@ package dev.j3c.sofkau.cleanarch.infrastructure.materialize;
 import com.mongodb.BasicDBObject;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.model.Filters;
+import dev.j3c.sofkau.cleanarch.domain.bill.Product;
 import dev.j3c.sofkau.cleanarch.domain.bill.event.BillGenerated;
 import dev.j3c.sofkau.cleanarch.domain.bill.event.ProductAdded;
 import io.quarkus.vertx.ConsumeEvent;
@@ -37,7 +38,10 @@ public class ProgramHandle {
     @ConsumeEvent(value = "sofkau.bill.productadded", blocking = true)
     void consumeProductAdded(ProductAdded event) {
         BasicDBObject document = new BasicDBObject();
-        document.put("products."+event.getProductId(), String.valueOf(event.getProductName() + event.getProductPrice()));
+        Product product =  new Product(event.getProductId(), event.getProductName(), event.getProductPrice());
+        var key = "products."+event.getProductId();
+        document.put(key+".name", event.getProductName());
+        document.put(key+".price", event.getProductPrice());
 
         BasicDBObject updateObject = new BasicDBObject();
         updateObject.put("$set", document);
