@@ -20,6 +20,7 @@ public class AddProductUseCase implements Function<AddProductCommand, List<Domai
 
     @Override
     public List<DomainEvent> apply(AddProductCommand command) {
+        System.out.println("use case");
         Bill bill = Bill.from(command.getBillId(), repository.getEventsBy("bill", command.getBillId()));
         bill.addProduct(command.getProductId(),
                 command.getProductName(),

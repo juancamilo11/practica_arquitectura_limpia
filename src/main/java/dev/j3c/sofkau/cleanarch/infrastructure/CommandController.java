@@ -22,6 +22,7 @@ public class CommandController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/createBill")
     public Response executor(GenerateBillCommand command) {
+        System.out.println("controller");
         messageService.send(command);
         return Response.ok().build();
     }
@@ -30,6 +31,7 @@ public class CommandController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/addProduct")
     public Response executor(AddProductCommand command) {
+        System.out.println("controller");
         messageService.send(command);
         return Response.ok().build();
     }

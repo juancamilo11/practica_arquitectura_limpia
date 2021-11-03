@@ -8,11 +8,11 @@ import io.quarkus.vertx.ConsumeEvent;
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class CreateProgramUseCaseHandle extends UseCaseHandle {
+public class GenerateBillUseCaseHandle extends UseCaseHandle {
 
     private final GenerateBillUseCase generateBillUseCase;
 
-    public CreateProgramUseCaseHandle(GenerateBillUseCase generateBillUseCase) {
+    public GenerateBillUseCaseHandle(GenerateBillUseCase generateBillUseCase) {
         this.generateBillUseCase = generateBillUseCase;
     }
 

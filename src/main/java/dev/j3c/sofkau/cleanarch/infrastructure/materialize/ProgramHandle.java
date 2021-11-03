@@ -24,7 +24,7 @@ public class ProgramHandle {
 
     @ConsumeEvent(value = "sofkau.bill.billgenerated", blocking = true)
     void consumeBillGenerated(BillGenerated event) {
-        System.out.println("materialize");
+        System.out.println("materialize bill");
         Map<String, Object> document = new HashMap<>();
         document.put("_id", event.getAggregateId());
         document.put("customerId", event.customerId());
@@ -37,6 +37,7 @@ public class ProgramHandle {
 
     @ConsumeEvent(value = "sofkau.bill.productadded", blocking = true)
     void consumeProductAdded(ProductAdded event) {
+        System.out.println("materialize product");
         BasicDBObject document = new BasicDBObject();
         Product product =  new Product(event.getProductId(), event.getProductName(), event.getProductPrice());
         var key = "products."+event.getProductId();
