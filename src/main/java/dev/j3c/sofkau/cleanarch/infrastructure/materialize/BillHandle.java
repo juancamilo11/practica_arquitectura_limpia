@@ -14,10 +14,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ApplicationScoped
-public class ProgramHandle {
+public class BillHandle {
     private final MongoClient mongoClient;
 
-    public ProgramHandle(MongoClient mongoClient) {
+    public BillHandle(MongoClient mongoClient) {
         this.mongoClient = mongoClient;
     }
 
@@ -39,7 +39,6 @@ public class ProgramHandle {
     void consumeProductAdded(ProductAdded event) {
         System.out.println("materialize product");
         BasicDBObject document = new BasicDBObject();
-        Product product =  new Product(event.getProductId(), event.getProductName(), event.getProductPrice());
         var key = "products."+event.getProductId();
         document.put(key+".name", event.getProductName());
         document.put(key+".price", event.getProductPrice());
