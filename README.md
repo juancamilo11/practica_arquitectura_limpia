@@ -1,7 +1,15 @@
 # propuesta-clean-architecture Project
-## By: Juan Camilo Cardona Calderón
+## By: 
+#### Nataly Mora Mancera
+#### Jean Carlos Trujillo
+#### Juan Camilo Cardona Calderón
+
+[Enlace a los diagramas de componentes e interacciones](https://app.diagrams.net/#G1Stg_eqnJErR098C_lFPggNnOjCVHAazJ)
 
 ![Image](https://apiumhub.com/wp-content/uploads/2018/10/Screenshot-2018-10-30-at-08.45.49.png "Clean Architecture")
+
+
+
 
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
